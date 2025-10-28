@@ -77,7 +77,7 @@ export default function Experience() {
             {experiences.map((exp, index) => (
               <div
                 key={index}
-                ref={(el) => itemRefs.current[index] = el}
+                ref={(el) => { itemRefs.current[index] = el; }}
                 data-index={index}
                 className={`relative pl-12 md:pl-20 transform transition-all duration-1000 ${
                   visibleItems.includes(index)

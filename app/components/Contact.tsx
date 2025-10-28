@@ -39,7 +39,7 @@ export default function Contact() {
          </h2>
          <p className="text-sm md:text-base text-white/60 font-light max-w-xl mx-auto px-4">
            Have a project in mind or want to discuss opportunities?
-           I'd love to hear from you.
+           I&apos;d love to hear from you.
          </p>
        </div>
 

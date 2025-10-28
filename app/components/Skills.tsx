@@ -103,8 +103,8 @@ export default function Skills() {
         {/* Philosophy Statement */}
         <div className={`mt-12 md:mt-16 lg:mt-20 text-center max-w-2xl mx-auto transform transition-all duration-1000 delay-600 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <p className="text-white/60 font-light leading-relaxed text-sm md:text-base px-4">
-            "Technology alone is not enough. It's technology married with the liberal arts,
-            married with the humanities, that yields the results that make our hearts sing."
+            &quot;Technology alone is not enough. It&apos;s technology married with the liberal arts,
+            married with the humanities, that yields the results that make our hearts sing.&quot;
           </p>
           <span className="text-white/40 text-xs md:text-sm mt-3 md:mt-4 block">— Philosophy I live by</span>
         </div>

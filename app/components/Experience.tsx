@@ -5,31 +5,33 @@ import { useEffect, useRef, useState } from 'react';
 const experiences = [
   {
     title: "Full Stack Developer",
-    company: "IgniPC+",
+    company: "IgniPC",
     period: "August 2024 — Present",
-    location: "Remote",
-    description: "Building scalable B2C platforms with modern web technologies. Leading frontend architecture decisions and optimizing database performance.",
+    location: "New Delhi",
+    description: "Architected and deployed production-grade B2C e-commerce platform using Next.js 14, TypeScript, and PostgreSQL, serving 120+ pages with 1000+ products across 15+ categories.",
     achievements: [
-      "Architected responsive e-commerce platform serving thousands of users",
-      "Implemented secure payment systems and user authentication flows",
-      "Optimized application performance, achieving 40% faster load times",
-      "Collaborated with cross-functional teams on feature development"
+      "Engineered universal product attribute system with dynamic form generation, improving admin productivity by 60% and product discoverability by 40%",
+      "Built robust RESTful APIs using Fastify with 50+ database migrations and complex business logic for pricing, inventory, and order workflows",
+      "Implemented enterprise-grade authentication using AWS Cognito with role-based access control, achieving 99.9% uptime",
+      "Integrated PayU payment gateway with hash-based security and price-locking mechanism, processing payments with zero security incidents",
+      "Developed comprehensive admin dashboard with full CRUD operations and bulk management capabilities",
+      "Optimized database performance with strategic indexing, reducing response times by 50%"
     ],
-    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Fastify"]
+    technologies: ["Next.js 14", "TypeScript", "PostgreSQL", "Fastify", "AWS Cognito", "Redux Toolkit", "Material-UI"]
   },
   {
-    title: "Frontend Developer",
+    title: "Full Stack Developer",
     company: "Hexafort",
-    period: "February 2024 — May 2024",
-    location: "Contract",
-    description: "Developed company website with focus on performance and user experience. Delivered pixel-perfect responsive design across all devices.",
+    period: "June 2024 — July 2024",
+    location: "Remote (Freelance)",
+    description: "Developed and deployed a 35-page responsive company website using React.js with mobile-first design principles, achieving 45% performance improvement.",
     achievements: [
-      "Created modern, responsive company website from ground up",
-      "Implemented performance optimizations including lazy loading",
-      "Ensured cross-browser compatibility and accessibility standards",
-      "Delivered project ahead of schedule with exceptional client feedback"
+      "Built responsive company website with code splitting and lazy loading for optimal performance",
+      "Implemented SEO optimization and cross-browser compatibility standards",
+      "Delivered production-ready application with optimized assets and hosting infrastructure",
+      "Maintained high code quality standards while meeting tight project deadlines"
     ],
-    technologies: ["React.js", "CSS3", "Performance Optimization"]
+    technologies: ["React.js", "CSS3", "SEO Optimization", "Responsive Design"]
   }
 ];
 

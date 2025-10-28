@@ -8,9 +8,9 @@ export default function Hero() {
 
   const roles = [
     "Full-Stack Developer",
+    "React & Node.js Specialist",
+    "System Architecture Engineer",
     "Problem Solver",
-    "Digital Craftsman",
-    "Technology Enthusiast",
   ];
 
   useEffect(() => {
@@ -37,8 +37,8 @@ export default function Hero() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="text-center">
           <div className={`transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            <div className="mb-6 md:mb-12 mt-8 md:mt-0">
-              <span className="text-xs md:text-sm tracking-[0.3em] text-white/60 uppercase font-light block mb-8 md:mb-10 text-center">
+            <div className="mb-6 md:mb-12 mt-8 lg:mt-16">
+              <span className="text-xs md:text-sm tracking-[0.3em] text-white/60 uppercase font-light block mb-8 md:mb-10 lg:mb-12 text-center">
                 Full-Stack Developer
               </span>
 
@@ -60,8 +60,9 @@ export default function Hero() {
           <div className={`transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="max-w-2xl mx-auto mb-8 md:mb-10 px-2">
               <p className="text-sm md:text-base lg:text-lg text-white/60 leading-relaxed font-light">
-                Crafting exceptional digital experiences through thoughtful engineering.
-                Specialized in React, Node.js, and modern web technologies.
+                Building production-grade web applications with expertise in e-commerce platforms,
+                payment integrations, and scalable system architecture. Specialized in React.js, Next.js,
+                Node.js, and PostgreSQL with proven ability to deliver measurable business impact.
               </p>
             </div>
           </div>
@@ -69,18 +70,18 @@ export default function Hero() {
           <div className={`transform transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="flex items-center justify-center gap-8 md:gap-16 mb-8 md:mb-12 text-sm">
               <div className="text-center">
-                <div className="text-xl md:text-2xl font-extralight text-white/80 mb-1">2+</div>
-                <div className="text-[10px] md:text-xs text-white/40 uppercase tracking-widest">Years</div>
+                <div className="text-xl md:text-2xl font-extralight text-white/80 mb-1">1+</div>
+                <div className="text-[10px] md:text-xs text-white/40 uppercase tracking-widest">Years Exp</div>
               </div>
               <div className="w-px h-6 md:h-8 bg-white/10"></div>
               <div className="text-center">
-                <div className="text-xl md:text-2xl font-extralight text-white/80 mb-1">15+</div>
-                <div className="text-[10px] md:text-xs text-white/40 uppercase tracking-widest">Projects</div>
+                <div className="text-xl md:text-2xl font-extralight text-white/80 mb-1">120+</div>
+                <div className="text-[10px] md:text-xs text-white/40 uppercase tracking-widest">Pages Built</div>
               </div>
               <div className="w-px h-6 md:h-8 bg-white/10"></div>
               <div className="text-center">
-                <div className="text-xl md:text-2xl font-extralight text-white/80 mb-1">∞</div>
-                <div className="text-[10px] md:text-xs text-white/40 uppercase tracking-widest">Passion</div>
+                <div className="text-xl md:text-2xl font-extralight text-white/80 mb-1">1000+</div>
+                <div className="text-[10px] md:text-xs text-white/40 uppercase tracking-widest">Products</div>
               </div>
             </div>
           </div>

@@ -4,31 +4,31 @@ import { useEffect, useRef, useState } from 'react';
 
 const skills = [
   {
-    category: "Frontend",
+    category: "Frontend Development",
     technologies: [
-      "React", "Next.js", "TypeScript", "JavaScript", "Redux",
-      "Tailwind CSS", "SASS", "Responsive Design"
+      "React.js", "Next.js 14", "TypeScript", "JavaScript", "Redux Toolkit",
+      "Material-UI", "HTML5", "CSS3", "Responsive Design"
     ]
   },
   {
-    category: "Backend",
+    category: "Backend Development",
     technologies: [
-      "Node.js", "Express.js", "Fastify", "PostgreSQL", "MongoDB",
-      "RESTful APIs", "JWT", "Drizzle ORM"
+      "Node.js", "Express.js", "Fastify", "RESTful APIs", "GraphQL",
+      "JWT Authentication", "API Design", "Microservices"
     ]
   },
   {
-    category: "Tools & Workflow",
+    category: "Databases & Cloud",
     technologies: [
-      "Git", "GitHub", "VSCode", "Postman", "Vercel",
-      "Chrome DevTools", "npm", "Webpack"
+      "PostgreSQL", "MongoDB", "Database Design", "Query Optimization",
+      "AWS Cognito", "Docker", "Kubernetes", "Linux"
     ]
   },
   {
-    category: "AI & Machine Learning",
+    category: "Tools & Best Practices",
     technologies: [
-      "Python", "NumPy", "Pandas", "LLM", "LangChain",
-      "LangGraph", "AI Engineering", "Machine Learning"
+      "Git", "GitHub", "VS Code", "ESLint", "Prettier",
+      "Husky", "Bash Scripting", "System Design", "OOP"
     ]
   }
 ];

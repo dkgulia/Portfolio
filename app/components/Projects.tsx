@@ -4,40 +4,40 @@ import { useEffect, useRef, useState } from 'react';
 
 const projects = [
   {
-    title: "IgniPC+ E-commerce Platform",
-    subtitle: "B2C Technology Platform",
-    description: "Scalable e-commerce solution built with Next.js and TypeScript. Features secure payment processing, real-time inventory management, and optimized user experience.",
-    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Fastify", "MUI"],
+    title: "IgniPC E-commerce Platform",
+    subtitle: "Production B2C Platform",
+    description: "Enterprise-grade e-commerce platform serving 120+ pages with 1000+ products across 15+ categories. Features dynamic product attribute system, AWS Cognito authentication, PayU payment integration, and comprehensive admin dashboard with Redux Toolkit state management.",
+    technologies: ["Next.js 14", "TypeScript", "PostgreSQL", "Fastify", "AWS Cognito", "Redux Toolkit", "Material-UI"],
     githubUrl: null,
     liveUrl: "https://ignipc.com",
-    impact: "Serving thousands of users with 40% improved performance"
+    impact: "99.9% uptime, 50% faster response times, zero security incidents"
   },
   {
-    title: "POS & Invoice System",
+    title: "POS System with Invoice Printing",
     subtitle: "Point of Sale Solution",
-    description: "Complete MERN stack application for retail management with integrated invoice printing, inventory tracking, and secure transaction processing.",
-    technologies: ["MongoDB", "Express.js", "React", "Node.js", "PDFKit"],
+    description: "Robust point-of-sale system with integrated invoice printing using MERN stack and Redux Toolkit. Features local storage optimization, PDFKit library for instant invoice generation, JWT authentication, and seamless offline functionality.",
+    technologies: ["MongoDB", "Express.js", "React", "Node.js", "Redux Toolkit", "PDFKit", "JWT"],
     githubUrl: "https://github.com/deepakgulia0809/pos-system",
     liveUrl: null,
-    impact: "Streamlined business operations for retail management"
+    impact: "100% transaction security with seamless offline functionality"
   },
   {
     title: "Hexafort Company Website",
-    subtitle: "Corporate Website",
-    description: "Modern, responsive company website with performance optimizations, interactive components, and mobile-first design principles.",
-    technologies: ["React.js", "CSS3", "Performance Optimization"],
+    subtitle: "35-Page Corporate Website",
+    description: "Responsive company website built with React.js and CSS, featuring mobile-first design principles, code splitting, lazy loading, SEO optimization, and cross-browser compatibility.",
+    technologies: ["React.js", "CSS3", "Code Splitting", "SEO Optimization", "Responsive Design"],
     githubUrl: null,
     liveUrl: "https://hexafort.io",
-    impact: "Enhanced company digital presence and user engagement"
+    impact: "45% performance improvement through optimization techniques"
   },
   {
-    title: "Open Source Contributions",
-    subtitle: "Web Development Portfolio",
-    description: "Collection of full-stack applications showcasing modern web development practices, RESTful APIs, and responsive design patterns.",
-    technologies: ["React", "Node.js", "PostgreSQL", "MongoDB"],
-    githubUrl: "https://github.com/deepakgulia0809",
+    title: "Open Source Portfolio",
+    subtitle: "Full-Stack Development Projects",
+    description: "Collection of full-stack applications demonstrating expertise in modern web technologies, RESTful API design, database architecture, and responsive UI/UX patterns.",
+    technologies: ["React", "Next.js", "Node.js", "PostgreSQL", "MongoDB", "TypeScript"],
+    githubUrl: "https://github.com/dkgulia",
     liveUrl: null,
-    impact: "Demonstrating expertise across full development stack"
+    impact: "Showcasing production-ready code and system design capabilities"
   }
 ];
 

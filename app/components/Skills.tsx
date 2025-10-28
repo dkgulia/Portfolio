@@ -55,18 +55,18 @@ export default function Skills() {
   }, []);
 
   return (
-    <section id="skills" className="py-32 relative" ref={sectionRef}>
+    <section id="skills" className="py-16 md:py-24 lg:py-32 relative" ref={sectionRef}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Clean Header */}
-        <div className={`text-center mb-20 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <span className="text-sm tracking-wider text-white/50 uppercase font-medium block mb-4">Expertise</span>
-          <h2 className="text-4xl md:text-5xl font-light text-white tracking-tight">
+        <div className={`text-center mb-12 md:mb-16 lg:mb-20 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <span className="text-xs md:text-sm tracking-wider text-white/50 uppercase font-medium block mb-3 md:mb-4">Expertise</span>
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-white tracking-tight">
             Skills & Technologies
           </h2>
         </div>
 
         {/* Refined Skills Grid */}
-        <div className="space-y-16">
+        <div className="space-y-10 md:space-y-12 lg:space-y-16">
           {skills.map((skillGroup, index) => (
             <div
               key={index}
@@ -77,18 +77,18 @@ export default function Skills() {
               }`}
               style={{ transitionDelay: `${index * 200}ms` }}
             >
-              <div className="border-l border-white/10 pl-8">
-                <h3 className="text-xl font-light text-white mb-6 tracking-wide">
+              <div className="border-l border-white/10 pl-4 md:pl-6 lg:pl-8">
+                <h3 className="text-lg md:text-xl font-light text-white mb-4 md:mb-6 tracking-wide">
                   {skillGroup.category}
                 </h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
                   {skillGroup.technologies.map((tech, techIndex) => (
                     <div
                       key={techIndex}
                       className="group"
                     >
-                      <div className="bg-white/5 border border-white/10 rounded px-4 py-3 hover:bg-white/10 hover:border-white/20 transition-all duration-300 cursor-default">
-                        <span className="text-sm text-white/80 font-light">
+                      <div className="bg-white/5 border border-white/10 rounded px-3 py-2.5 md:px-4 md:py-3 hover:bg-white/10 hover:border-white/20 transition-all duration-300 cursor-default">
+                        <span className="text-xs md:text-sm text-white/80 font-light">
                           {tech}
                         </span>
                       </div>
@@ -100,13 +100,13 @@ export default function Skills() {
           ))}
         </div>
 
-        {/* Philosophy Statement - Jony Ive style */}
-        <div className={`mt-20 text-center max-w-2xl mx-auto transform transition-all duration-1000 delay-600 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <p className="text-white/60 font-light leading-relaxed">
+        {/* Philosophy Statement */}
+        <div className={`mt-12 md:mt-16 lg:mt-20 text-center max-w-2xl mx-auto transform transition-all duration-1000 delay-600 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <p className="text-white/60 font-light leading-relaxed text-sm md:text-base px-4">
             "Technology alone is not enough. It's technology married with the liberal arts,
             married with the humanities, that yields the results that make our hearts sing."
           </p>
-          <span className="text-white/40 text-sm mt-4 block">— Philosophy I live by</span>
+          <span className="text-white/40 text-xs md:text-sm mt-3 md:mt-4 block">— Philosophy I live by</span>
         </div>
       </div>
     </section>

@@ -58,12 +58,12 @@ export default function Experience() {
   }, []);
 
   return (
-    <section id="experience" className="py-32 relative">
+    <section id="experience" className="py-16 md:py-24 lg:py-32 relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Clean Header */}
-        <div className="text-center mb-20">
-          <span className="text-sm tracking-wider text-white/50 uppercase font-medium block mb-4">Journey</span>
-          <h2 className="text-4xl md:text-5xl font-light text-white tracking-tight">
+        <div className="text-center mb-12 md:mb-16 lg:mb-20">
+          <span className="text-xs md:text-sm tracking-wider text-white/50 uppercase font-medium block mb-3 md:mb-4">Journey</span>
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-white tracking-tight">
             Experience
           </h2>
         </div>
@@ -71,15 +71,15 @@ export default function Experience() {
         {/* Refined Timeline */}
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-8 top-0 bottom-0 w-px bg-white/10"></div>
+          <div className="absolute left-4 md:left-8 top-0 bottom-0 w-px bg-white/10"></div>
 
-          <div className="space-y-16">
+          <div className="space-y-10 md:space-y-12 lg:space-y-16">
             {experiences.map((exp, index) => (
               <div
                 key={index}
                 ref={(el) => itemRefs.current[index] = el}
                 data-index={index}
-                className={`relative pl-20 transform transition-all duration-1000 ${
+                className={`relative pl-12 md:pl-20 transform transition-all duration-1000 ${
                   visibleItems.includes(index)
                     ? 'translate-y-0 opacity-100'
                     : 'translate-y-10 opacity-0'
@@ -87,34 +87,34 @@ export default function Experience() {
                 style={{ transitionDelay: `${index * 200}ms` }}
               >
                 {/* Timeline dot */}
-                <div className="absolute left-6 top-2 w-4 h-4 bg-white/20 rounded-full border-2 border-white/40"></div>
+                <div className="absolute left-2.5 md:left-6 top-2 w-3 h-3 md:w-4 md:h-4 bg-white/20 rounded-full border-2 border-white/40"></div>
 
-                <div className="space-y-6">
+                <div className="space-y-4 md:space-y-6">
                   {/* Header */}
                   <div>
-                    <div className="flex items-center gap-3 mb-2">
-                      <h3 className="text-xl font-medium text-white">{exp.title}</h3>
-                      <span className="text-sm text-white/40">•</span>
-                      <span className="text-lg text-white/80">{exp.company}</span>
+                    <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-3 mb-2">
+                      <h3 className="text-lg md:text-xl font-medium text-white">{exp.title}</h3>
+                      <span className="hidden md:inline text-sm text-white/40">•</span>
+                      <span className="text-base md:text-lg text-white/80">{exp.company}</span>
                     </div>
-                    <div className="flex items-center gap-4 text-sm text-white/50">
+                    <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 text-xs md:text-sm text-white/50">
                       <span>{exp.period}</span>
-                      <span>•</span>
+                      <span className="hidden md:inline">•</span>
                       <span>{exp.location}</span>
                     </div>
                   </div>
 
                   {/* Description */}
-                  <p className="text-white/70 font-light leading-relaxed">
+                  <p className="text-sm md:text-base text-white/70 font-light leading-relaxed">
                     {exp.description}
                   </p>
 
                   {/* Achievements */}
                   <div className="space-y-2">
                     {exp.achievements.map((achievement, achievementIndex) => (
-                      <div key={achievementIndex} className="flex items-start gap-3">
-                        <span className="text-white/30 mt-2">—</span>
-                        <span className="text-white/60 text-sm font-light leading-relaxed">
+                      <div key={achievementIndex} className="flex items-start gap-2 md:gap-3">
+                        <span className="text-white/30 mt-1 md:mt-2">—</span>
+                        <span className="text-white/60 text-xs md:text-sm font-light leading-relaxed">
                           {achievement}
                         </span>
                       </div>
@@ -126,7 +126,7 @@ export default function Experience() {
                     {exp.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="text-xs text-white/50 border border-white/10 rounded px-2 py-1 font-light"
+                        className="text-[10px] md:text-xs text-white/50 border border-white/10 rounded px-2 py-1 font-light"
                       >
                         {tech}
                       </span>
@@ -139,24 +139,24 @@ export default function Experience() {
         </div>
 
         {/* Education & Certifications */}
-        <div className="mt-20 pt-16 border-t border-white/10">
-          <div className="space-y-12">
+        <div className="mt-12 md:mt-16 lg:mt-20 pt-12 md:pt-16 border-t border-white/10">
+          <div className="space-y-8 md:space-y-12">
             {/* Education */}
             <div>
-              <h3 className="text-lg font-light text-white mb-4">Education</h3>
-              <div className="pl-6 border-l border-white/10">
-                <div className="text-white/80 font-medium">Bachelor of Engineering, Mechanical</div>
-                <div className="text-white/50 text-sm">Chandigarh University • Punjab, India</div>
+              <h3 className="text-base md:text-lg font-light text-white mb-3 md:mb-4">Education</h3>
+              <div className="pl-4 md:pl-6 border-l border-white/10">
+                <div className="text-sm md:text-base text-white/80 font-medium">Bachelor of Engineering, Mechanical</div>
+                <div className="text-xs md:text-sm text-white/50">Chandigarh University • Punjab, India</div>
               </div>
             </div>
 
             {/* Certifications */}
             <div>
-              <h3 className="text-lg font-light text-white mb-4">Certifications</h3>
-              <div className="pl-6 border-l border-white/10 space-y-3">
-                <div className="text-white/60 text-sm font-light">Node.js API Masterclass — Udemy</div>
-                <div className="text-white/60 text-sm font-light">Complete JavaScript Course — Professional Certificate</div>
-                <div className="text-white/60 text-sm font-light">React.js — Professional Certificate</div>
+              <h3 className="text-base md:text-lg font-light text-white mb-3 md:mb-4">Certifications</h3>
+              <div className="pl-4 md:pl-6 border-l border-white/10 space-y-2 md:space-y-3">
+                <div className="text-white/60 text-xs md:text-sm font-light">Node.js API Masterclass — Udemy</div>
+                <div className="text-white/60 text-xs md:text-sm font-light">Complete JavaScript Course — Professional Certificate</div>
+                <div className="text-white/60 text-xs md:text-sm font-light">React.js — Professional Certificate</div>
               </div>
             </div>
           </div>

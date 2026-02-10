@@ -112,7 +112,7 @@ export default function Experience() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-8 md:mb-12 lg:mb-14">
-          <span className="text-xs md:text-sm tracking-wider text-[#00ff41]/40 uppercase font-mono block mb-3 md:mb-4">// git log --oneline</span>
+          <span className="text-xs md:text-sm tracking-wider text-[#00ff41]/40 uppercase font-mono block mb-3 md:mb-4">{"// git log --oneline"}</span>
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-[#e0ffe0] tracking-tight matrix-text-subtle">
             Experience
           </h2>
@@ -193,7 +193,7 @@ export default function Experience() {
             {/* Education */}
             <div>
               <h3 className="text-base md:text-lg font-mono text-[#e0ffe0] mb-3 md:mb-4">
-                <span className="text-[#00ff41]/30">// </span>education
+                <span className="text-[#00ff41]/30">{"// "}</span>education
               </h3>
               <div className="pl-4 md:pl-6 border-l border-[#00ff41]/10">
                 <div className="text-sm md:text-base text-[#e0ffe0]/80 font-medium">Bachelor of Engineering, Mechanical</div>
@@ -204,7 +204,7 @@ export default function Experience() {
             {/* Certifications */}
             <div>
               <h3 className="text-base md:text-lg font-mono text-[#e0ffe0] mb-3 md:mb-4">
-                <span className="text-[#00ff41]/30">// </span>certifications
+                <span className="text-[#00ff41]/30">{"// "}</span>certifications
               </h3>
               <div className="pl-4 md:pl-6 border-l border-[#00ff41]/10 space-y-2 md:space-y-3">
                 <div className="text-[#e0ffe0]/50 text-xs md:text-sm font-mono">Node.js API Masterclass — Udemy</div>

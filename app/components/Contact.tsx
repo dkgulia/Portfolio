@@ -33,7 +33,7 @@ export default function Contact() {
      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
        {/* Header */}
        <div className={`text-center mb-8 md:mb-12 lg:mb-14 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-         <span className="text-xs md:text-sm tracking-wider text-[#00ff41]/40 uppercase font-mono block mb-3 md:mb-4">// ssh connect</span>
+         <span className="text-xs md:text-sm tracking-wider text-[#00ff41]/40 uppercase font-mono block mb-3 md:mb-4">{"// ssh connect"}</span>
          <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-[#e0ffe0] tracking-tight matrix-text-subtle mb-4 md:mb-6">
            Get in Touch
          </h2>
@@ -168,7 +168,7 @@ export default function Contact() {
        {/* Footer */}
        <div className={`text-center mt-12 md:mt-16 lg:mt-20 pt-12 md:pt-16 border-t border-[#00ff41]/10 transform transition-all duration-1000 delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
          <p className="text-[#e0ffe0]/30 font-mono text-xs md:text-sm">
-           <span className="text-[#00ff41]/20">// </span>
+           <span className="text-[#00ff41]/20">{"// "}</span>
            &copy; 2025 Deepak Gulia. Crafted with attention to detail.
          </p>
        </div>

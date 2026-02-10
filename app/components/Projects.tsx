@@ -71,7 +71,7 @@ export default function Projects() {
         {/* Header */}
         <div className="text-center mb-8 md:mb-12 lg:mb-14">
           <span className="text-xs md:text-sm tracking-wider text-[#00ff41]/40 uppercase font-mono block mb-3 md:mb-4">
-            // ls -la ~/projects
+            {"// ls -la ~/projects"}
           </span>
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-[#e0ffe0] tracking-tight matrix-text-subtle">
             Selected Work

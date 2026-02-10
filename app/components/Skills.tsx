@@ -63,7 +63,7 @@ export default function Skills() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className={`text-center mb-8 md:mb-12 lg:mb-14 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <span className="text-xs md:text-sm tracking-wider text-[#00ff41]/40 uppercase font-mono block mb-3 md:mb-4">// expertise</span>
+          <span className="text-xs md:text-sm tracking-wider text-[#00ff41]/40 uppercase font-mono block mb-3 md:mb-4">{"// expertise"}</span>
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-[#e0ffe0] tracking-tight matrix-text-subtle">
             Skills & Technologies
           </h2>
@@ -113,12 +113,12 @@ export default function Skills() {
         {/* Philosophy Statement */}
         <div className={`mt-12 md:mt-16 lg:mt-20 text-center max-w-2xl mx-auto transform transition-all duration-1000 delay-600 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <p className="text-[#e0ffe0]/35 font-mono leading-relaxed text-xs md:text-sm px-4">
-            <span className="text-[#00ff41]/25">// </span>
+            <span className="text-[#00ff41]/25">{"// "}</span>
             &quot;Technology alone is not enough. It&apos;s technology married with the liberal arts,
             married with the humanities, that yields the results that make our hearts sing.&quot;
           </p>
           <span className="text-[#e0ffe0]/25 text-xs md:text-sm mt-3 md:mt-4 block font-mono">
-            <span className="text-[#00ff41]/20">// </span>— Philosophy I live by
+            <span className="text-[#00ff41]/20">{"// "}</span>{"— Philosophy I live by"}
           </span>
         </div>
       </div>

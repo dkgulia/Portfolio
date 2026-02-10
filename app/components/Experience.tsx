@@ -1,8 +1,40 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useMemo } from 'react';
 
 const experiences = [
+  {
+    title: "Founder & Full Stack Developer",
+    company: "Align",
+    period: "January 2025 — Present",
+    location: "New Delhi",
+    description: "Building an AI-powered freemium SEO platform that helps developers optimize websites for AI search engines like ChatGPT, Perplexity, and Claude. Align automatically scans sites, detects SEO issues, and creates GitHub PRs with AI-generated fixes.",
+    achievements: [
+      "Architected a smart site scanner using Cheerio and Puppeteer that crawls pages to extract metadata, OpenGraph tags, JSON-LD structured data, and heading hierarchy",
+      "Built an AI-powered PR generator that detects project type (Next.js, React, HTML) and produces targeted code diffs using DeepSeek, OpenAI, and Anthropic APIs",
+      "Designed a 4-tab dashboard (X-Ray, Schema, AI Readiness, Authority) with a 3-panel layout for site management, scan results, and fix controls",
+      "Implemented end-to-end issue-to-PR tracking with GitHub webhook sync and verification scans to confirm fixes post-merge",
+      "Integrated Clerk authentication, Supabase PostgreSQL database with migrations, and GitHub App (Octokit) for seamless repo access and PR creation",
+      "Developed free public SEO tools including X-Ray scanner, Schema checker, Compare tool, and Authority Map"
+    ],
+    technologies: ["Next.js 14", "TypeScript", "Supabase", "Tailwind CSS", "Zustand", "Clerk", "OpenAI", "GitHub App", "Puppeteer"]
+  },
+  {
+    title: "Founder & Full Stack Developer",
+    company: "BuildStack",
+    period: "December 2024 — Present",
+    location: "New Delhi",
+    description: "Built an AI-powered PC builder SaaS that helps users design custom PC builds with real-time compatibility checking, AI-driven component recommendations, and a database of 5000+ parts across 9 categories.",
+    achievements: [
+      "Developed a real-time compatibility engine that validates CPU-motherboard socket matching, RAM type compatibility, PSU wattage adequacy with 1.2x headroom, GPU physical fit, and CPU cooler thermal capacity",
+      "Integrated DeepSeek AI for intelligent component recommendations and guided build wizards with 4 pre-configured use cases (Gaming, Video Editing, Coding, Office), with heuristic fallback for reliability",
+      "Architected a flexible PostgreSQL schema using JSONB specs for unified component storage with GIN indexes, enabling fast filtered queries across all part categories",
+      "Built 120+ pre-built templates with budget-aware allocation percentages, platform filtering (AMD/Intel), and bottleneck detection for CPU-GPU imbalance",
+      "Implemented shareable build links via slug-based URLs, side-by-side component comparison (up to 3), and a responsive UI with separate desktop sidebar and mobile bottom sheet layouts",
+      "Designed the system with no-signup-required access using Supabase Row-Level Security for public reads, reducing friction for first-time users"
+    ],
+    technologies: ["Next.js 14", "TypeScript", "Supabase", "Tailwind CSS", "Zustand", "DeepSeek AI", "Framer Motion", "Radix UI"]
+  },
   {
     title: "Full Stack Developer",
     company: "IgniPC",
@@ -35,9 +67,25 @@ const experiences = [
   }
 ];
 
+function generateHash(seed: number): string {
+  const hex = '0123456789abcdef';
+  let hash = '';
+  let s = seed * 2654435761;
+  for (let i = 0; i < 7; i++) {
+    s = ((s >> 4) ^ (s * 48271)) & 0xfffffff;
+    hash += hex[Math.abs(s) % 16];
+  }
+  return hash;
+}
+
 export default function Experience() {
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  const commitHashes = useMemo(
+    () => experiences.map((_, i) => generateHash(i + 42)),
+    []
+  );
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -60,20 +108,20 @@ export default function Experience() {
   }, []);
 
   return (
-    <section id="experience" className="py-16 md:py-24 lg:py-32 relative">
+    <section id="experience" className="py-10 md:py-16 lg:py-20 relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Clean Header */}
-        <div className="text-center mb-12 md:mb-16 lg:mb-20">
-          <span className="text-xs md:text-sm tracking-wider text-white/50 uppercase font-medium block mb-3 md:mb-4">Journey</span>
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-white tracking-tight">
+        {/* Header */}
+        <div className="text-center mb-8 md:mb-12 lg:mb-14">
+          <span className="text-xs md:text-sm tracking-wider text-[#00ff41]/40 uppercase font-mono block mb-3 md:mb-4">// git log --oneline</span>
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-[#e0ffe0] tracking-tight matrix-text-subtle">
             Experience
           </h2>
         </div>
 
-        {/* Refined Timeline */}
+        {/* Timeline */}
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-4 md:left-8 top-0 bottom-0 w-px bg-white/10"></div>
+          <div className="absolute left-4 md:left-8 top-0 bottom-0 w-px bg-[#00ff41]/10"></div>
 
           <div className="space-y-10 md:space-y-12 lg:space-y-16">
             {experiences.map((exp, index) => (
@@ -89,34 +137,33 @@ export default function Experience() {
                 style={{ transitionDelay: `${index * 200}ms` }}
               >
                 {/* Timeline dot */}
-                <div className="absolute left-2.5 md:left-6 top-2 w-3 h-3 md:w-4 md:h-4 bg-white/20 rounded-full border-2 border-white/40"></div>
+                <div className="absolute left-2.5 md:left-6 top-2 w-3 h-3 md:w-4 md:h-4 bg-[#00ff41]/20 rounded-full border-2 border-[#00ff41]/40"></div>
 
                 <div className="space-y-4 md:space-y-6">
-                  {/* Header */}
-                  <div>
-                    <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-3 mb-2">
-                      <h3 className="text-lg md:text-xl font-medium text-white">{exp.title}</h3>
-                      <span className="hidden md:inline text-sm text-white/40">•</span>
-                      <span className="text-base md:text-lg text-white/80">{exp.company}</span>
+                  {/* Git-log Header */}
+                  <div className="space-y-1 font-mono">
+                    <div className="text-[#00ff41] text-xs md:text-sm">
+                      commit <span className="text-[#00ff41]/60">{commitHashes[index]}</span>
                     </div>
-                    <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 text-xs md:text-sm text-white/50">
-                      <span>{exp.period}</span>
-                      <span className="hidden md:inline">•</span>
-                      <span>{exp.location}</span>
+                    <div className="text-[#e0ffe0]/50 text-xs">
+                      Author: {exp.title} &lt;{exp.company}&gt;
+                    </div>
+                    <div className="text-[#e0ffe0]/50 text-xs">
+                      Date: {exp.period} | {exp.location}
                     </div>
                   </div>
 
                   {/* Description */}
-                  <p className="text-sm md:text-base text-white/70 font-light leading-relaxed">
+                  <p className="text-sm md:text-base text-[#e0ffe0]/60 font-light leading-relaxed pl-4 border-l border-[#00ff41]/10">
                     {exp.description}
                   </p>
 
                   {/* Achievements */}
-                  <div className="space-y-2">
+                  <div className="space-y-1.5">
                     {exp.achievements.map((achievement, achievementIndex) => (
                       <div key={achievementIndex} className="flex items-start gap-2 md:gap-3">
-                        <span className="text-white/30 mt-1 md:mt-2">—</span>
-                        <span className="text-white/60 text-xs md:text-sm font-light leading-relaxed">
+                        <span className="text-[#00ff41]/40 mt-0.5 font-mono text-xs">+</span>
+                        <span className="text-[#e0ffe0]/50 text-xs md:text-sm font-light leading-relaxed">
                           {achievement}
                         </span>
                       </div>
@@ -128,7 +175,7 @@ export default function Experience() {
                     {exp.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="text-[10px] md:text-xs text-white/50 border border-white/10 rounded px-2 py-1 font-light"
+                        className="text-[10px] md:text-xs text-[#00ff41]/50 border border-[#00ff41]/15 rounded px-2 py-1 font-mono"
                       >
                         {tech}
                       </span>
@@ -141,24 +188,28 @@ export default function Experience() {
         </div>
 
         {/* Education & Certifications */}
-        <div className="mt-12 md:mt-16 lg:mt-20 pt-12 md:pt-16 border-t border-white/10">
+        <div className="mt-12 md:mt-16 lg:mt-20 pt-12 md:pt-16 border-t border-[#00ff41]/10">
           <div className="space-y-8 md:space-y-12">
             {/* Education */}
             <div>
-              <h3 className="text-base md:text-lg font-light text-white mb-3 md:mb-4">Education</h3>
-              <div className="pl-4 md:pl-6 border-l border-white/10">
-                <div className="text-sm md:text-base text-white/80 font-medium">Bachelor of Engineering, Mechanical</div>
-                <div className="text-xs md:text-sm text-white/50">Chandigarh University • Punjab, India</div>
+              <h3 className="text-base md:text-lg font-mono text-[#e0ffe0] mb-3 md:mb-4">
+                <span className="text-[#00ff41]/30">// </span>education
+              </h3>
+              <div className="pl-4 md:pl-6 border-l border-[#00ff41]/10">
+                <div className="text-sm md:text-base text-[#e0ffe0]/80 font-medium">Bachelor of Engineering, Mechanical</div>
+                <div className="text-xs md:text-sm text-[#e0ffe0]/40 font-mono">Chandigarh University • Punjab, India</div>
               </div>
             </div>
 
             {/* Certifications */}
             <div>
-              <h3 className="text-base md:text-lg font-light text-white mb-3 md:mb-4">Certifications</h3>
-              <div className="pl-4 md:pl-6 border-l border-white/10 space-y-2 md:space-y-3">
-                <div className="text-white/60 text-xs md:text-sm font-light">Node.js API Masterclass — Udemy</div>
-                <div className="text-white/60 text-xs md:text-sm font-light">Complete JavaScript Course — Professional Certificate</div>
-                <div className="text-white/60 text-xs md:text-sm font-light">React.js — Professional Certificate</div>
+              <h3 className="text-base md:text-lg font-mono text-[#e0ffe0] mb-3 md:mb-4">
+                <span className="text-[#00ff41]/30">// </span>certifications
+              </h3>
+              <div className="pl-4 md:pl-6 border-l border-[#00ff41]/10 space-y-2 md:space-y-3">
+                <div className="text-[#e0ffe0]/50 text-xs md:text-sm font-mono">Node.js API Masterclass — Udemy</div>
+                <div className="text-[#e0ffe0]/50 text-xs md:text-sm font-mono">Complete JavaScript Course — Professional Certificate</div>
+                <div className="text-[#e0ffe0]/50 text-xs md:text-sm font-mono">React.js — Professional Certificate</div>
               </div>
             </div>
           </div>

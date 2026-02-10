@@ -1,87 +1,103 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import MatrixRain from './MatrixRain';
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
-  const [currentRole, setCurrentRole] = useState(0);
+  const [displayedRole, setDisplayedRole] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [roleIndex, setRoleIndex] = useState(0);
 
   const roles = [
     "Full-Stack Developer",
+    "SaaS Builder",
     "React & Node.js Specialist",
-    "System Architecture Engineer",
-    "Problem Solver",
+    "System Architect",
   ];
+
+  const currentFullRole = roles[roleIndex];
 
   useEffect(() => {
     setIsVisible(true);
+  }, []);
 
-    const roleInterval = setInterval(() => {
-      setCurrentRole((prev) => (prev + 1) % roles.length);
-    }, 4000);
+  // Typing animation
+  useEffect(() => {
+    let timeout: NodeJS.Timeout;
 
-    return () => clearInterval(roleInterval);
-  }, [roles.length]);
+    if (!isDeleting && displayedRole.length < currentFullRole.length) {
+      timeout = setTimeout(() => setDisplayedRole(currentFullRole.slice(0, displayedRole.length + 1)), 80);
+    } else if (!isDeleting && displayedRole.length === currentFullRole.length) {
+      timeout = setTimeout(() => setIsDeleting(true), 2000);
+    } else if (isDeleting && displayedRole.length > 0) {
+      timeout = setTimeout(() => setDisplayedRole(displayedRole.slice(0, -1)), 40);
+    } else if (isDeleting && displayedRole.length === 0) {
+      setIsDeleting(false);
+      setRoleIndex((prev) => (prev + 1) % roles.length);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [displayedRole, isDeleting, roleIndex, currentFullRole, roles.length]);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center py-12 md:py-0 relative overflow-hidden">
-      {/* Subtle Background Elements */}
+    <section id="home" className="min-h-screen flex items-center justify-center py-12 md:py-0 relative overflow-hidden scanline-overlay">
+      {/* Matrix Rain Background */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-purple-500/5 rounded-full mix-blend-screen filter blur-3xl opacity-40 animate-float"></div>
-        <div
-          className="absolute bottom-1/4 right-1/3 w-80 h-80 bg-violet-500/5 rounded-full mix-blend-screen filter blur-3xl opacity-40 animate-float"
-          style={{ animationDelay: '2s' }}
-        ></div>
+        <MatrixRain opacity={0.12} speed={50} />
+        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black to-transparent z-10" />
       </div>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="text-center">
           <div className={`transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            <div className="mb-6 md:mb-12 mt-8 lg:mt-16">
-              <span className="text-xs md:text-sm tracking-[0.3em] text-white/60 uppercase font-light block mb-8 md:mb-10 lg:mb-12 text-center">
-                Full-Stack Developer
+            <div className="mb-6 md:mb-10 mt-8 lg:mt-16">
+              <span className="text-xs md:text-sm tracking-[0.3em] text-[#00ff41]/50 uppercase font-mono block mb-6 md:mb-8 text-center">
+                ~/developer/fullstack
               </span>
 
               <div className="relative">
-                <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-extralight tracking-[0.08em] text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-purple-100 hover:from-purple-100 hover:via-white hover:to-violet-100 transition-all duration-700">
+                <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-extralight tracking-[0.08em] matrix-text animate-text-glow">
                   DEEPAK GULIA
                 </h1>
-                <div className="w-12 md:w-16 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent mx-auto mt-4 md:mt-6"></div>
+                <div className="w-12 md:w-16 h-px bg-gradient-to-r from-transparent via-[#00ff41]/30 to-transparent mx-auto mt-4 md:mt-6"></div>
               </div>
             </div>
 
             <div className="h-10 md:h-12 flex items-center justify-center mb-6 md:mb-8">
-              <h2 className="text-sm md:text-lg lg:text-xl font-light text-white/70 tracking-wider transition-all duration-700">
-                {roles[currentRole]}
+              <h2 className="text-sm md:text-lg lg:text-xl font-mono text-[#00ff41]/80 tracking-wider">
+                <span className="text-[#00ff41]/40">$ </span>
+                {displayedRole}
+                <span className="animate-cursor-blink text-[#00ff41]">|</span>
               </h2>
             </div>
           </div>
 
           <div className={`transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="max-w-2xl mx-auto mb-8 md:mb-10 px-2">
-              <p className="text-sm md:text-base lg:text-lg text-white/60 leading-relaxed font-light">
-                Building production-grade web applications with expertise in e-commerce platforms,
-                payment integrations, and scalable system architecture. Specialized in React.js, Next.js,
-                Node.js, and PostgreSQL with proven ability to deliver measurable business impact.
+              <p className="text-sm md:text-base lg:text-lg text-[#e0ffe0]/50 leading-relaxed font-light">
+                Full-stack developer who ships SaaS products end-to-end — from system design to deployment.
+                Built and launched <span className="text-[#00ff41]/70">Align</span> (AI-powered SEO platform) and <span className="text-[#00ff41]/70">BuildStack</span> (AI PC builder),
+                plus production e-commerce serving 1000+ products.
               </p>
             </div>
           </div>
 
+          {/* SaaS Products + Stats Terminal */}
           <div className={`transform transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            <div className="flex items-center justify-center gap-8 md:gap-16 mb-8 md:mb-12 text-sm">
-              <div className="text-center">
-                <div className="text-xl md:text-2xl font-extralight text-white/80 mb-1">1+</div>
-                <div className="text-[10px] md:text-xs text-white/40 uppercase tracking-widest">Years Exp</div>
-              </div>
-              <div className="w-px h-6 md:h-8 bg-white/10"></div>
-              <div className="text-center">
-                <div className="text-xl md:text-2xl font-extralight text-white/80 mb-1">120+</div>
-                <div className="text-[10px] md:text-xs text-white/40 uppercase tracking-widest">Pages Built</div>
-              </div>
-              <div className="w-px h-6 md:h-8 bg-white/10"></div>
-              <div className="text-center">
-                <div className="text-xl md:text-2xl font-extralight text-white/80 mb-1">1000+</div>
-                <div className="text-[10px] md:text-xs text-white/40 uppercase tracking-widest">Products</div>
+            <div className="font-mono bg-black/50 border border-[#00ff41]/10 rounded p-4 md:p-6 max-w-lg mx-auto text-left mb-8 md:mb-12">
+              <div className="text-[#00ff41]/40 text-xs mb-3">$ cat profile.json</div>
+              <div className="space-y-1 text-xs md:text-sm">
+                <div>{'{'}</div>
+                <div className="pl-4"><span className="text-[#00ff41]/60">&quot;stack&quot;</span>: <span className="text-[#e0ffe0]/60">&quot;Next.js, TypeScript, Node.js, PostgreSQL&quot;</span>,</div>
+                <div className="pl-4"><span className="text-[#00ff41]/60">&quot;saas_products&quot;</span>: [</div>
+                <div className="pl-8"><span className="text-[#00ff41]">&quot;Align — AI SEO Platform&quot;</span>,</div>
+                <div className="pl-8"><span className="text-[#00ff41]">&quot;BuildStack — AI PC Builder&quot;</span></div>
+                <div className="pl-4">],</div>
+                <div className="pl-4"><span className="text-[#00ff41]/60">&quot;production_apps&quot;</span>: <span className="text-[#00ff41]">&quot;3&quot;</span>,</div>
+                <div className="pl-4"><span className="text-[#00ff41]/60">&quot;pages_shipped&quot;</span>: <span className="text-[#00ff41]">&quot;120+&quot;</span>,</div>
+                <div className="pl-4"><span className="text-[#00ff41]/60">&quot;products_managed&quot;</span>: <span className="text-[#00ff41]">&quot;1000+&quot;</span></div>
+                <div>{'}'}</div>
               </div>
             </div>
           </div>
@@ -90,24 +106,24 @@ export default function Hero() {
           <div className={`flex flex-col sm:flex-row gap-4 md:gap-6 justify-center transform transition-all duration-1000 delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <a
               href="#projects"
-              className="group inline-flex items-center justify-center px-6 md:px-8 py-2.5 md:py-3 border border-white/20 text-white/80 text-sm md:text-base font-light tracking-wide hover:text-white hover:border-white/40 transition-all duration-300 rounded-sm"
+              className="group inline-flex items-center justify-center px-6 md:px-8 py-2.5 md:py-3 border border-[#00ff41]/20 text-[#00ff41]/80 text-sm md:text-base font-mono tracking-wide hover:text-[#00ff41] hover:border-[#00ff41]/40 hover:bg-[#00ff41]/5 transition-all duration-300 rounded-sm"
             >
-              <span>View Work</span>
-              <span className="ml-3 transform group-hover:translate-x-1 transition-transform duration-200 text-white/60">→</span>
+              <span>view_work</span>
+              <span className="ml-3 transform group-hover:translate-x-1 transition-transform duration-200 text-[#00ff41]/50">→</span>
             </a>
 
             <a
               href="#contact"
-              className="inline-flex items-center justify-center px-6 md:px-8 py-2.5 md:py-3 text-white/50 text-sm md:text-base font-light tracking-wide hover:text-white/80 transition-all duration-300"
+              className="inline-flex items-center justify-center px-6 md:px-8 py-2.5 md:py-3 text-[#e0ffe0]/40 text-sm md:text-base font-mono tracking-wide hover:text-[#00ff41]/80 transition-all duration-300"
             >
-              Get in Touch
+              get_in_touch
             </a>
           </div>
 
           <div className={`mt-12 md:mt-16 transform transition-all duration-1000 delay-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="flex flex-col items-center">
-              <div className="w-px h-12 md:h-16 bg-gradient-to-b from-transparent via-white/20 to-transparent"></div>
-              <div className="w-1 h-2 bg-white/30 rounded-full animate-bounce mt-2"></div>
+              <div className="w-px h-12 md:h-16 bg-gradient-to-b from-transparent via-[#00ff41]/20 to-transparent"></div>
+              <div className="w-1 h-2 bg-[#00ff41]/30 rounded-full animate-bounce mt-2"></div>
             </div>
           </div>
         </div>

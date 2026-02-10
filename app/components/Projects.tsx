@@ -13,13 +13,13 @@ const projects = [
     impact: "99.9% uptime, 50% faster response times, zero security incidents"
   },
   {
-    title: "POS System with Invoice Printing",
-    subtitle: "Point of Sale Solution",
-    description: "Robust point-of-sale system with integrated invoice printing using MERN stack and Redux Toolkit. Features local storage optimization, PDFKit library for instant invoice generation, JWT authentication, and seamless offline functionality.",
-    technologies: ["MongoDB", "Express.js", "React", "Node.js", "Redux Toolkit", "PDFKit", "JWT"],
-    githubUrl: "https://github.com/deepakgulia0809/pos-system",
-    liveUrl: null,
-    impact: "100% transaction security with seamless offline functionality"
+    title: "Align — AI-Powered SEO Platform",
+    subtitle: "Freemium SaaS Product",
+    description: "AI-native SEO platform that helps developers optimize websites for AI search engines like ChatGPT, Perplexity, and Claude. Features a smart site scanner (Cheerio + Puppeteer) that crawls pages to extract metadata, OpenGraph tags, JSON-LD structured data, and heading hierarchy. Automatically generates GitHub PRs with AI-powered SEO fixes by detecting project type (Next.js, React, HTML) and producing targeted code diffs. Includes a 4-tab dashboard (X-Ray, Schema, AI Readiness, Authority), issue-to-PR tracking with verification scans, and free public SEO tools.",
+    technologies: ["Next.js 14", "TypeScript", "Supabase", "Tailwind CSS", "Zustand", "Clerk", "OpenAI", "GitHub App", "Puppeteer"],
+    githubUrl: null,
+    liveUrl: "https://alignagent.online/",
+    impact: "End-to-end automated SEO remediation with AI-generated PRs and scan verification"
   },
   {
     title: "Hexafort Company Website",
@@ -31,13 +31,13 @@ const projects = [
     impact: "45% performance improvement through optimization techniques"
   },
   {
-    title: "Open Source Portfolio",
-    subtitle: "Full-Stack Development Projects",
-    description: "Collection of full-stack applications demonstrating expertise in modern web technologies, RESTful API design, database architecture, and responsive UI/UX patterns.",
-    technologies: ["React", "Next.js", "Node.js", "PostgreSQL", "MongoDB", "TypeScript"],
-    githubUrl: "https://github.com/dkgulia",
-    liveUrl: null,
-    impact: "Showcasing production-ready code and system design capabilities"
+    title: "BuildStack — AI-Powered PC Builder",
+    subtitle: "SaaS Product",
+    description: "AI-powered PC builder platform that helps users design custom PC builds with real-time compatibility checking and intelligent component recommendations. Features a database of 5000+ components across 9 categories, DeepSeek AI-driven suggestions with heuristic fallback, guided wizards for Gaming/Editing/Coding/Office use cases, 120+ pre-built templates, side-by-side comparison, shareable build links, and bottleneck detection. No signup required — built for zero-friction access.",
+    technologies: ["Next.js 14", "TypeScript", "Supabase", "Tailwind CSS", "Zustand", "DeepSeek AI", "Framer Motion", "Radix UI"],
+    githubUrl: null,
+    liveUrl: "https://build-stack-lilac.vercel.app/",
+    impact: "5000+ components with real-time compatibility validation and AI-powered build generation"
   }
 ];
 
@@ -66,14 +66,14 @@ export default function Projects() {
   }, []);
 
   return (
-    <section id="projects" className="py-16 md:py-24 lg:py-32 relative">
+    <section id="projects" className="py-10 md:py-16 lg:py-20 relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12 md:mb-16 lg:mb-20">
-          <span className="text-xs md:text-sm tracking-wider text-white/50 uppercase font-medium block mb-3 md:mb-4">
-            Portfolio
+        <div className="text-center mb-8 md:mb-12 lg:mb-14">
+          <span className="text-xs md:text-sm tracking-wider text-[#00ff41]/40 uppercase font-mono block mb-3 md:mb-4">
+            // ls -la ~/projects
           </span>
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-white tracking-tight">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-[#e0ffe0] tracking-tight matrix-text-subtle">
             Selected Work
           </h2>
         </div>
@@ -92,24 +92,35 @@ export default function Projects() {
               }`}
               style={{ transitionDelay: `${index * 150}ms` }}
             >
-              <div className="border border-white/10 rounded bg-white/5 backdrop-blur-sm hover:bg-white/10 hover:border-white/20 transition-all duration-500 overflow-hidden h-full">
+              <div className="terminal-window hover-glow transition-all duration-500 h-full">
+                {/* Terminal Header */}
+                <div className="terminal-header justify-between">
+                  <div className="flex items-center gap-1.5">
+                    <div className="terminal-dot"></div>
+                    <div className="terminal-dot"></div>
+                    <div className="terminal-dot active"></div>
+                    <span className="font-mono text-[#00ff41]/50 text-xs ml-2">
+                      {project.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}
+                    </span>
+                  </div>
+                  <span className="font-mono text-[#00ff41]/30 text-xs hidden sm:inline">{project.subtitle}</span>
+                </div>
+
+                {/* Card Body */}
                 <div className="p-5 md:p-6 lg:p-8">
                   {/* Header */}
                   <div className="mb-4 md:mb-6">
-                    <div className="text-xs md:text-sm text-white/50 font-light tracking-wide mb-2">
-                      {project.subtitle}
-                    </div>
-                    <h3 className="text-lg md:text-xl font-medium text-white mb-2 md:mb-3">
+                    <h3 className="text-lg md:text-xl font-medium text-[#e0ffe0] mb-2 md:mb-3">
                       {project.title}
                     </h3>
-                    <p className="text-sm md:text-base text-white/70 font-light leading-relaxed">
+                    <p className="text-sm md:text-base text-[#e0ffe0]/50 font-light leading-relaxed">
                       {project.description}
                     </p>
                   </div>
 
                   {/* Impact */}
                   <div className="mb-4 md:mb-6">
-                    <div className="text-xs md:text-sm text-white/50 italic border-l-2 border-white/20 pl-3 md:pl-4">
+                    <div className="text-xs md:text-sm text-[#e0ffe0]/40 italic border-l-2 border-[#00ff41]/20 pl-3 md:pl-4 font-mono">
                       {project.impact}
                     </div>
                   </div>
@@ -120,7 +131,7 @@ export default function Projects() {
                       {project.technologies.map((tech, techIndex) => (
                         <span
                           key={techIndex}
-                          className="text-[10px] md:text-xs text-white/60 border border-white/20 rounded px-2 py-1 font-light"
+                          className="text-[10px] md:text-xs text-[#00ff41]/50 border border-[#00ff41]/15 rounded px-2 py-1 font-mono"
                         >
                           {tech}
                         </span>
@@ -135,9 +146,9 @@ export default function Projects() {
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-xs md:text-sm text-white/80 hover:text-white transition-colors group-hover:translate-x-1 transform transition-transform duration-200"
+                        className="inline-flex items-center text-xs md:text-sm text-[#00ff41]/70 hover:text-[#00ff41] font-mono transition-colors duration-200"
                       >
-                        View Live
+                        <span className="text-[#00ff41]/40 mr-1">$</span> open
                         <span className="ml-2">↗</span>
                       </a>
                     )}
@@ -146,9 +157,9 @@ export default function Projects() {
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-xs md:text-sm text-white/60 hover:text-white/80 transition-colors"
+                        className="inline-flex items-center text-xs md:text-sm text-[#e0ffe0]/40 hover:text-[#00ff41]/70 font-mono transition-colors duration-200"
                       >
-                        Source Code
+                        <span className="text-[#00ff41]/40 mr-1">$</span> source
                         <span className="ml-2">→</span>
                       </a>
                     )}
@@ -161,14 +172,14 @@ export default function Projects() {
 
         {/* CTA */}
         <div className="text-center mt-12 md:mt-16 lg:mt-20">
-          <p className="text-sm md:text-base text-white/60 font-light mb-4 md:mb-6">
+          <p className="text-sm md:text-base text-[#e0ffe0]/40 font-mono mb-4 md:mb-6">
             Interested in working together?
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center justify-center px-6 md:px-8 py-2.5 md:py-3 border border-white/20 text-sm md:text-base text-white font-light tracking-wide hover:bg-white/5 transition-all duration-300 rounded-sm group"
+            className="inline-flex items-center justify-center px-6 md:px-8 py-2.5 md:py-3 border border-[#00ff41]/20 text-sm md:text-base text-[#00ff41]/80 font-mono tracking-wide hover:bg-[#00ff41]/5 hover:border-[#00ff41]/40 transition-all duration-300 rounded-sm group"
           >
-            Let&apos;s Talk
+            lets_talk
             <span className="ml-2 transform group-hover:translate-x-1 transition-transform duration-200">→</span>
           </a>
         </div>

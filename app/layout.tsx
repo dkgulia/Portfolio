@@ -13,14 +13,27 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Deepak Gulia | Personal Portfolio & Professional Profile",
-  description: "Explore the professional portfolio of Deepak Gulia. Discover skills, projects, and contact information for collaboration opportunities and professional networking.",
+  title: "Deepak Gulia | Portfolio & Professional Services",
+  description: "Explore Deepak Gulia's professional portfolio showcasing expertise, services, and contact information for collaboration opportunities.",
   openGraph: {
-    title: "Deepak Gulia | Personal Portfolio & Professional Profile",
-    description: "Explore the professional portfolio of Deepak Gulia. Discover skills, projects, and contact information for collaboration opportunities.",
+    title: "Deepak Gulia | Professional Portfolio & Services",
+    description: "Discover Deepak Gulia's professional portfolio, expertise, and services. Connect for collaboration opportunities and projects.",
+    url: "https://www.deepakgulia.online",
     type: "website",
-    url: "https://www.deepakgulia.online/",
-    siteName: "Deepak Gulia Portfolio",
+    images: [
+      {
+        url: "https://www.deepakgulia.online/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Deepak Gulia | Professional Portfolio & Services",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Deepak Gulia | Professional Portfolio & Services",
+    description: "Discover Deepak Gulia's professional portfolio, expertise, and services. Connect for collaboration opportunities and projects.",
+    images: ["https://www.deepakgulia.online/og-image.png"],
   },
 };
 
@@ -29,11 +42,25 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
+  
+  const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Deepak Gulia | Portfolio & Professional Services",
+  "description": "Explore Deepak Gulia's professional portfolio showcasing expertise, services, and contact information for collaboration opportunities.",
+  "url": "https://www.deepakgulia.online/"
+};
+
+return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+
         {children}
       </body>
     </html>

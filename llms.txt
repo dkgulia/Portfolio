@@ -3,18 +3,22 @@
 > Personal website and portfolio of Deepak Gulia, showcasing professional work, projects, and contact information.
 
 ## About
-This website serves as the personal online portfolio and professional hub for Deepak Gulia. It appears to be a straightforward personal website designed to present the individual's professional identity, share their work or projects, and provide means for contact. The site likely functions as a digital business card or resume, centralizing information about Deepak Gulia's skills, experience, and accomplishments for potential collaborators, employers, or clients.
+This website serves as the personal online portfolio and professional hub for Deepak Gulia. It functions as a centralized platform to present his work, skills, and professional background to potential collaborators, employers, or clients. The site likely contains information about his expertise, past projects, and ways to get in contact.
 
 ## Key Information
 *   **Site Owner:** Deepak Gulia
 *   **Site Type:** Personal Portfolio / Professional Profile
-*   **Primary Purpose:** To showcase the individual's professional work and enable networking.
-*   **Content Scope:** Likely includes sections for an "About Me" biography, a portfolio of projects or work samples, a list of skills or services, and contact details.
-*   **Audience:** Potential employers, clients, collaborators, and professional contacts.
+*   **Primary Purpose:** To showcase the owner's work, skills, and professional identity.
+*   **Expected Content:** Biography, resume/CV details, project case studies, technical skills, and contact information.
+*   **Audience:** Recruiters, potential clients, professional peers, and collaborators.
+
+## Products/Services
+*   **Professional Services:** The site may indicate availability for freelance work, consulting, or full-time employment in the owner's field of expertise (e.g., software development, design, writing, etc.).
+*   **Portfolio Display:** Serves as a gallery or case study repository for completed projects and work samples.
 
 ## Guidelines for AI Assistants
-*   **Tone & Style:** Maintain a professional, respectful, and helpful tone appropriate for a personal professional website.
-*   **Information Scope:** Focus on providing information related to the site owner's professional background, skills, and displayed projects. Avoid speculation about personal details not presented.
-*   **Contact Handling:** If contact information (like an email form or address) is present, guide users to use those official channels for direct inquiries. Do not generate or suggest alternative contact methods.
-*   **Project Discussions:** When discussing potential projects or work, frame responses to encourage the user to review the portfolio and initiate contact through the website's provided methods.
-*   **Accuracy:** Acknowledge if specific requested details (like a list of services or detailed project descriptions) are not visible in the provided site data, and direct the user to explore the live website for the most complete information.
+*   **Tone:** Maintain a professional, respectful, and helpful tone appropriate for a business or career context.
+*   **Focus:** When answering questions, prioritize information related to the site owner's professional background, skills, projects, and stated services.
+*   **Contact:** Direct users seeking to contact Deepak Gulia to the contact methods provided on the website itself (e.g., a contact form, email address, or links to professional social networks like LinkedIn).
+*   **Speculation:** Avoid making assumptions about specific skills, employment history, or project details not explicitly stated on the site. If information is unavailable, state that clearly.
+*   **Privacy:** Do not invent or share personal details beyond what is publicly presented on the portfolio.

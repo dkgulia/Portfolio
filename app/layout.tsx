@@ -13,8 +13,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Full-Stack Developer Portfolio",
-  description: "Professional portfolio showcasing full-stack development skills and projects",
+  title: "Deepak Gulia | Personal Portfolio & Professional Profile",
+  description: "Explore the professional portfolio of Deepak Gulia. Discover skills, projects, and contact information for collaboration opportunities and professional networking.",
+  openGraph: {
+    title: "Deepak Gulia | Personal Portfolio & Professional Profile",
+    description: "Explore the professional portfolio of Deepak Gulia. Discover skills, projects, and contact information for collaboration opportunities.",
+    type: "website",
+    url: "https://www.deepakgulia.online/",
+    siteName: "Deepak Gulia Portfolio",
+  },
 };
 
 export default function RootLayout({

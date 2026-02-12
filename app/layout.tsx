@@ -14,10 +14,13 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Deepak Gulia | Portfolio & Professional Services",
-  description: "Explore Deepak Gulia's professional portfolio showcasing expertise, services, and contact information for collaboration opportunities.",
+  description: "Explore Deepak Gulia's professional portfolio, services, and expertise. Connect for collaborations and innovative solutions.",
+  alternates: {
+    canonical: "https://www.deepakgulia.online",
+  },
   openGraph: {
-    title: "Deepak Gulia | Professional Portfolio & Services",
-    description: "Discover Deepak Gulia's professional portfolio, expertise, and services. Connect for collaboration opportunities and projects.",
+    title: "Deepak Gulia | Portfolio, Services & Professional Solutions",
+    description: "Discover Deepak Gulia's professional portfolio and services. Connect for collaborations and innovative digital solutions.",
     url: "https://www.deepakgulia.online",
     type: "website",
     images: [
@@ -25,14 +28,14 @@ export const metadata: Metadata = {
         url: "https://www.deepakgulia.online/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Deepak Gulia | Professional Portfolio & Services",
+        alt: "Deepak Gulia | Portfolio, Services & Professional Solutions",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Deepak Gulia | Professional Portfolio & Services",
-    description: "Discover Deepak Gulia's professional portfolio, expertise, and services. Connect for collaboration opportunities and projects.",
+    title: "Deepak Gulia | Portfolio, Services & Professional Solutions",
+    description: "Discover Deepak Gulia's professional portfolio and services. Connect for collaborations and innovative digital solutions.",
     images: ["https://www.deepakgulia.online/og-image.png"],
   },
 };

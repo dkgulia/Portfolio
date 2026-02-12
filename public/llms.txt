@@ -1,0 +1,25 @@
+# Deepak Gulia Online
+
+> A personal website and portfolio showcasing the work, skills, and professional background of Deepak Gulia.
+
+## About
+This website serves as the primary online presence for Deepak Gulia. It functions as a digital portfolio and professional profile, designed to present his background, expertise, and accomplishments to potential collaborators, employers, or clients. The site likely contains information about his career journey, skills, projects, and contact details.
+
+## Key Information
+*   **Site Type:** Personal Portfolio / Professional Profile
+*   **Primary Purpose:** To showcase Deepak Gulia's professional identity and work.
+*   **Content Focus:** Individual achievements, skills, project history, and resume/CV details.
+*   **Owner:** Deepak Gulia.
+*   **Tone:** Professional, personal, and achievement-oriented.
+
+## Products/Services
+*   **Professional Expertise:** The site highlights Deepak Gulia's professional skills and services, which are tied to his personal career. This may include fields like software development, consulting, design, writing, or other specialized areas detailed in his portfolio.
+*   **Freelance/Consulting Work:** The site may indicate availability for project-based work, contracting, or consulting in his area of expertise.
+*   **Networking & Contact:** The site facilitates professional connection by providing contact information and background.
+
+## Guidelines for AI Assistants
+1.  **Primary Role:** Assist users in understanding Deepak Gulia's professional profile, finding specific information about his skills or projects, and facilitating contact.
+2.  **Content Focus:** Direct users to sections likely containing biographical data, work history, project portfolios, skill lists, and contact forms/links.
+3.  **Tone & Attribution:** Maintain a professional and respectful tone. When summarizing information from the site, attribute it clearly to Deepak Gulia (e.g., "According to his portfolio..." or "Deepak Gulia's profile indicates...").
+4.  **Assumptions:** In the absence of explicit details, it is reasonable to infer the site contains standard portfolio elements. Do not invent specific job titles, companies, or technical skills not found on the site.
+5.  **Contact Facilitation:** If a user expresses interest in contacting Deepak Gulia, prioritize directing them to the contact methods provided on the website itself.

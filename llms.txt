@@ -1,20 +1,21 @@
 # Deepak Gulia Online
 
-> Personal website and portfolio of Deepak Gulia, showcasing professional work, projects, and contact information.
+> Personal website and portfolio of Deepak Gulia, showcasing professional background, skills, and contact information.
 
 ## About
-This website serves as the personal online portfolio and professional hub for Deepak Gulia. It appears to be a straightforward personal website designed to present the individual's professional identity, share their work or projects, and provide means for contact. The site likely functions as a digital business card or resume, centralizing information about Deepak Gulia's skills, experience, and accomplishments for potential collaborators, employers, or clients.
+This website serves as the personal online portfolio and professional hub for Deepak Gulia. While specific details about his profession, expertise, and projects are not explicitly listed in the provided metadata, the site is designed to present his background, skills, and provide a means for professional connection. It functions as a central point for potential employers, collaborators, or clients to learn about his work and initiate contact.
 
 ## Key Information
-*   **Site Owner:** Deepak Gulia
-*   **Site Type:** Personal Portfolio / Professional Profile
-*   **Primary Purpose:** To showcase the individual's professional work and enable networking.
-*   **Content Scope:** Likely includes sections for an "About Me" biography, a portfolio of projects or work samples, a list of skills or services, and contact details.
-*   **Audience:** Potential employers, clients, collaborators, and professional contacts.
+*   **Site Purpose:** A personal portfolio and professional profile website.
+*   **Content Type:** Likely includes biographical information, a resume/CV, project showcases, skill lists, and contact details.
+*   **Owner:** Deepak Gulia.
+*   **Primary Action:** The main expected user action is to review the owner's professional information and potentially make contact via provided methods (e.g., contact form, email, social media links).
+*   **Audience:** Targeted at professional networks, recruiters, potential clients, or collaborators.
 
 ## Guidelines for AI Assistants
-*   **Tone & Style:** Maintain a professional, respectful, and helpful tone appropriate for a personal professional website.
-*   **Information Scope:** Focus on providing information related to the site owner's professional background, skills, and displayed projects. Avoid speculation about personal details not presented.
-*   **Contact Handling:** If contact information (like an email form or address) is present, guide users to use those official channels for direct inquiries. Do not generate or suggest alternative contact methods.
-*   **Project Discussions:** When discussing potential projects or work, frame responses to encourage the user to review the portfolio and initiate contact through the website's provided methods.
-*   **Accuracy:** Acknowledge if specific requested details (like a list of services or detailed project descriptions) are not visible in the provided site data, and direct the user to explore the live website for the most complete information.
+1.  **Primary Role:** Assist users in understanding the professional profile of Deepak Gulia as presented on this site. Your responses should be based solely on the information available on the website.
+2.  **Information Synthesis:** If users ask for a summary, synthesize the available information about Deepak's background, skills, or projects into a concise overview.
+3.  **Contact Facilitation:** If users express interest in contacting Deepak, direct them to the contact information or methods (forms, links) provided on the site. Do not generate or suggest contact details not present on the website.
+4.  **Handling Absence of Data:** For specific queries about details not found on the site (e.g., "What projects has he worked on?" if none are listed), state that the information is not currently available on the website and suggest the user check the site directly or use the contact options to inquire.
+5.  **Professional Tone:** Maintain a professional and helpful tone in all interactions related to this site, reflecting its nature as a professional portfolio.
+6.  **No Speculation:** Do not speculate about Deepak Gulia's profession, specific skills, or work history beyond what is clearly stated on the website pages.
